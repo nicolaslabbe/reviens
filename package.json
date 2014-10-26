@@ -1,14 +1,46 @@
 {
+  "name": "reviens",
+  "version": "1.0.0",
+  "description": "reviens =======",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nicolaslabbe/reviens.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nicolaslabbe/reviens/issues"
+  },
+  "homepage": "https://github.com/nicolaslabbe/reviens",
   "devDependencies": {
+    "compass": "^0.1.0",
     "grunt": "^0.4.4",
     "grunt-cli": "*",
-    "grunt-contrib-watch": "*",
-    "matchdep": "*",
     "grunt-contrib-less": "*",
+    "grunt-contrib-watch": "*",
     "grunt-cordovacli": "^0.3.4",
     "grunt-exec": "^0.4.5",
+    "gulp": "^3.8.9",
+    "gulp-build": "^0.5.3",
+    "gulp-clean": "^0.3.1",
+    "gulp-compass": "^2.0.1",
+    "gulp-concat": "^2.4.1",
+    "gulp-copy": "0.0.2",
+    "gulp-livereload": "^2.1.1",
+    "gulp-notify": "^2.0.0",
+    "gulp-plumber": "^0.6.6",
+    "gulp-rename": "^1.2.0",
+    "gulp-watch": "^1.1.0",
     "ios-sim": "^1.9.0",
-    "plist": "git+https://github.com/TooTallNate/plist.js.git",
-    "mobile-icon-resizer":"*"
+    "matchdep": "*",
+    "mobile-icon-resizer": "*",
+    "plist": "git+https://github.com/TooTallNate/plist.js.git"
+  },
+  "dependencies": {
+    "gulp-load": "^0.1.1"
   }
 }

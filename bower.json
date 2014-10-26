@@ -1,0 +1,14 @@
+{
+    "name": "reviens",
+    "version": "0.0.0",
+    "homepage": "https://github.com/nicolaslabbe/reviens",
+    "authors": [
+        "nicolaslabbe <nicolas.labbe@adfab.fr>"
+    ],
+        "license": "MIT",
+        "dependencies": {
+        "angular": "~1.3.0",
+        "angular-ui-router": "~0.2.11",
+        "bootstrap-sass": "~3.0.2"
+    }
+}

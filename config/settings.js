@@ -1,14 +1,14 @@
 var settings = {
-	appName: 'fr.adfab.myApp',
+	appName: 'reviens',
 	environment: {
 		dev: {
-			datahostname : "myApp.dev"
+			datahostname : "reviens.dev"
 		},
 		stage: {
-			datahostname : "myApp.adfab.fr"
+			datahostname : "reviens.fr"
 		},
 		prod: {
-			datahostname : "myApp.fr"
+			datahostname : "reviens.fr"
 		}
 	},
 	plugins: [

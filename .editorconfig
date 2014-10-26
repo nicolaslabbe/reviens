@@ -1,0 +1,8 @@
+# editorconfig.org
+root = true
+
+[*]
+charset = "utf8"
+indent_style = space
+indent_size = 4
+trim_trailing_whitespace = true
