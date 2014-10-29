@@ -55,7 +55,7 @@ gulp.task('clean', function() {
         .pipe(clean());
 });
 
-// Copy all other files to dist directly
+// Copy all other files to dist directlydirectly
 gulp.task('concat', function() {
     gulp.src([
             './' + srcPath + 'bower_components/angular/angular.js',
