@@ -254,7 +254,8 @@ table {
 
   @page {
     margin: 2cm .5cm;
-  }
+}
+
   p,
   h2,
   h3 {
@@ -2433,5 +2434,3 @@ body {
 body div {
   color: blue;
 }
-
-/*# sourceMappingURL=main.css.map */
