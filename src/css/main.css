@@ -2428,6 +2428,10 @@ input[type="button"].btn-block {
 
 body {
   background-color: red;
+  font-size: 10px;
+}
+body div {
+  color: blue;
 }
 
 /*# sourceMappingURL=main.css.map */
