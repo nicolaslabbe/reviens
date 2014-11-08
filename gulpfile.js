@@ -59,6 +59,8 @@ gulp.task('clean', function() {
 gulp.task('concat', function() {
     gulp.src([
             './' + srcPath + 'bower_components/angular/angular.js',
+            './' + srcPath + 'bower_components/angular-animate/angular-animate.min.js',
+            './' + srcPath + 'bower_components/angular-translate/angular-translate.min.js',
             './' + srcPath + 'bower_components/angular-ui-router/release/angular-ui-router.min.js',
             './' + srcPath + 'js/**/*.js'
         ])

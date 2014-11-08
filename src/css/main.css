@@ -5521,6 +5521,100 @@ td.visible-print {
     display: none !important;
   }
 }
+.bg-brand {
+  background-color: #1fb7c0;
+}
+
+.bg-green {
+  background-color: #2ecc71;
+}
+
+.bg-orange {
+  background-color: #e67e22;
+}
+
+.bg-blue {
+  background-color: #3498db;
+}
+
+.bg-purple {
+  background-color: #9b59b6;
+}
+
+.bg-dark-grey {
+  background-color: #34495e;
+}
+
+@-webkit-keyframes page_enter {
+  0% {
+    transform: translate(100%, 0px);
+  }
+
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+@keyframes page_enter {
+  0% {
+    -webkit-transform: translate(100%, 0px);
+  }
+
+  100% {
+    -webkit-transform: translate(0px, 0px);
+  }
+}
+@-webkit-keyframes page_leave {
+  0% {
+    transform: translate(0px, 0px);
+  }
+
+  100% {
+    transform: translate(-100%, 0px);
+  }
+}
+@keyframes page_leave {
+  0% {
+    -webkit-transform: translate(0px, 0px);
+  }
+
+  100% {
+    -webkit-transform: translate(-100%, 0px);
+  }
+}
+.page {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+}
+.page .header {
+  width: 100%;
+  height: 65px;
+  display: block;
+  padding-left: 70px;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+  font-weight: normal;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.page .header:hover {
+  text-decoration: none;
+}
+
+.ng-enter.page {
+  -webkit-animation: page_enter 400ms ease-in-out;
+  animation: page_enter 400ms ease-in-out;
+}
+
+.ng-leave.page {
+  -webkit-animation: page_leave 400ms ease-in-out;
+  animation: page_leave 400ms ease-in-out;
+}
+
 .menu {
   position: absolute;
   background: black;
@@ -5537,25 +5631,8 @@ td.visible-print {
   align-items: center;
   justify-content: center;
 }
-.menu li.bg-brand {
-  background-color: #1fb7c0;
-}
-.menu li.bg-green {
-  background-color: #2ecc71;
-}
-.menu li.bg-orange {
-  background-color: #e67e22;
-}
-.menu li.bg-blue {
-  background-color: #3498db;
-}
-.menu li.bg-purple {
-  background-color: #9b59b6;
-}
-.menu li.bg-dark-grey {
-  background-color: #34495e;
-}
-.menu a {
+.menu span,
+.menu h1 {
   width: 100%;
   display: block;
   padding-left: 70px;
@@ -5565,16 +5642,9 @@ td.visible-print {
   cursor: pointer;
   font-weight: normal;
 }
-.menu a:hover {
+.menu span:hover,
+.menu h1:hover {
   text-decoration: none;
-}
-.menu a h1 {
-  margin: 0px;
-  font-size: inherit;
-  text-transform: inherit;
-  color: inherit;
-  font-weight: normal;
-  font-family: HelveticaNeue-Light, Helvetica Neue Light, times;
 }
 
 body {
