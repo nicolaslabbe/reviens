@@ -741,17 +741,17 @@ pre code {
   clear: both;
 }
 
-.row {
+.row, .list li {
   margin-left: -15px;
   margin-right: -15px;
 }
-.row:before, .row:after {
+.row:before, .list li:before, .row:after, .list li:after {
   content: " ";
   /* 1 */
   display: table;
   /* 2 */
 }
-.row:after {
+.row:after, .list li:after {
   clear: both;
 }
 
@@ -5521,6 +5521,50 @@ td.visible-print {
     display: none !important;
   }
 }
+.ft-brand {
+  color: #1fb7c0;
+}
+
+.ft-green {
+  color: #2ecc71;
+}
+
+.ft-orange {
+  color: #e67e22;
+}
+
+.ft-blue {
+  color: #3498db;
+}
+
+.ft-purple {
+  color: #9b59b6;
+}
+
+.ft-dark-grey {
+  color: #34495e;
+}
+
+@font-face {
+  font-family: "Reviens";
+  src: url("../fonts/Reviens.eot");
+  src: url("../fonts/Reviens.eot?#iefix") format("eot"), url("../fonts/Reviens.woff") format("woff"), url("../fonts/Reviens.ttf") format("truetype"), url("../fonts/Reviens.svg#Reviens") format("svg");
+}
+.ico-arrow-right:before {
+  font-family: "Reviens";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+
+.ico-arrow-right:before {
+  content: "\E001";
+}
+
 .bg-brand {
   background-color: #1fb7c0;
 }
@@ -5588,11 +5632,12 @@ td.visible-print {
   position: absolute;
 }
 .page .header {
+  position: relative;
   width: 100%;
   height: 65px;
   display: block;
   padding-left: 70px;
-  font-size: 30px;
+  font-size: 20px;
   text-transform: uppercase;
   color: white;
   cursor: pointer;
@@ -5603,6 +5648,14 @@ td.visible-print {
 }
 .page .header:hover {
   text-decoration: none;
+}
+.page .back {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: block;
+  vertical-align: middle;
+  height: 100%;
 }
 
 .ng-enter.page {
@@ -5647,13 +5700,27 @@ td.visible-print {
   text-decoration: none;
 }
 
+.list {
+  width: 100%;
+  display: block;
+  list-style: none;
+  padding-left: 0px;
+  overflow: hidden;
+}
+.list li {
+  position: relative;
+  font-size: 20px;
+  color: #666666;
+  clear: both;
+  padding: 10px;
+}
+.list li div {
+  word-wrap: break-word;
+}
+
 body {
-  background-color: red;
   font-size: 10px;
   font-family: HelveticaNeue-Light, Helvetica Neue Light, times;
-}
-body div {
-  color: blue;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,65 @@
+@font-face {
+    font-family: "Reviens";
+    src: url('../fonts/Reviens.eot');
+    src: url('../fonts/Reviens.eot?#iefix') format('eot'),
+        url('../fonts/Reviens.woff') format('woff'),
+        url('../fonts/Reviens.ttf') format('truetype'),
+        url('../fonts/Reviens.svg#Reviens') format('svg');
+}
+
+%ico {
+    font-family: "Reviens";
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    // speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+    text-decoration: none;
+    text-transform: none;
+}
+
+@function ico-char($filename) {
+    $char: "";
+
+    @if $filename == arrow-right {
+        $char: "\E001";
+    }
+    @if $filename == cross {
+        $char: "\E002";
+    }
+    @if $filename == home {
+        $char: "\E003";
+    }
+    @if $filename == location {
+        $char: "\E004";
+    }
+    @if $filename == profil {
+        $char: "\E005";
+    }
+
+    @return $char;
+}
+
+@mixin ico($filename, $insert: before) {
+    &:#{$insert} {
+        @extend %ico;
+        content: ico-char($filename);
+    }
+}
+
+.ico-arrow-right {
+    @include ico(arrow-right);
+}
+.ico-cross {
+    @include ico(cross);
+}
+.ico-home {
+    @include ico(home);
+}
+.ico-location {
+    @include ico(location);
+}
+.ico-profil {
+    @include ico(profil);
+}

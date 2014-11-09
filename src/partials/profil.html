@@ -1,4 +1,27 @@
 <!-- partials/profil.html -->
 <div class="header bg-green">
-{{ 'HEADER_PROFIL' | translate }}
+    <div ng-include="'partials/block-back.html'"></div>
+    {{ 'HEADER_PROFIL' | translate }}
 </div>
+
+<ul class="list">
+    <li>
+        <div class="col-xs-5 text-center ft-green">{{ 'PROFIL_TAKE_PICTURE' | translate }}</div>
+        <div class="col-xs-5 text-center ft-green">{{ 'PROFIL_CHOOSE_PICTURE' | translate }}</div>
+        <span class="col-xs-4" class="ico ico-cross"></span>
+    </li>
+    <li>
+        <span class="col-xs-3 ico ico-profil"></span>
+        <div class="col-xs-7">Nom</div>
+        <span class="col-xs-2">
+            <span class="ft-green ico-arrow-right"></span>
+        </span>
+    </li>
+    <li>
+        <span class="col-xs-3 ico ico-city"></span>
+        <div class="col-xs-7">City</div>
+        <span class="col-xs-2">
+            <span class="ft-green ico-arrow-right"></span>
+        </span>
+    </li>
+</ul>

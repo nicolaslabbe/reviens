@@ -6,7 +6,9 @@ var gulp = require('gulp'),
     build = require('gulp-build'),
     concat = require('gulp-concat'),
     clean = require('gulp-clean'),
-    rename = require('gulp-rename');
+    rename = require('gulp-rename'),
+    iconfont = require('gulp-iconfont'),
+    iconfontCss = require('gulp-iconfont-css');
 
 var notifyInfo = {
     title: 'Gulp'
@@ -18,6 +20,8 @@ var plumberErrorHandler = {
         message: "Error: <%= error.message %>"
     })
 };
+
+var fontName = 'Reviens';
 
 var srcPath = 'src/',
     targetPath = 'src/',
@@ -46,7 +50,27 @@ gulp.task('compass', function() {
 gulp.task('watch', function() {
     livereload.listen();
     gulp.watch(path.src.sass + '*.sass', ['compass']);
-    gulp.watch(srcPath + '/js/**').on('change', livereload.changed);
+    gulp.watch(srcPath + '/js/**/*.js').on('change', livereload.changed);
+    gulp.watch(srcPath + '/partials/*.html').on('change', livereload.changed);
+});
+
+gulp.task('Iconfont', function(){
+    gulp.src([srcPath + 'img/icons/*.svg'])
+        .pipe(iconfontCss({
+            fontName: fontName,
+            path: srcPath + 'sass/templates/_icons.scss',
+            targetPath: '../sass/_icons.scss',
+            fontPath: '../fonts/'
+        }))
+        .pipe(iconfont({
+            fontName: fontName, // required
+            appendCodepoints: true // recommended option
+        }))
+        .on('codepoints', function(codepoints, options) {
+            // CSS templating, e.g.
+            console.log(codepoints, options);
+        })
+        .pipe(gulp.dest(srcPath + 'fonts/'));
 });
 
 // Delete the dist directory
@@ -55,7 +79,7 @@ gulp.task('clean', function() {
         .pipe(clean());
 });
 
-// Copy all other files to dist directlydirectly
+// Copy all other files to dist directly
 gulp.task('concat', function() {
     gulp.src([
             './' + srcPath + 'bower_components/angular/angular.js',

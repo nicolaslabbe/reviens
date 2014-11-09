@@ -1,3 +1,5 @@
 {
-    "HEADER_PROFIL": "Mon profile"
+    "HEADER_PROFIL": "Mon profile",
+    "PROFIL_TAKE_PICTURE":"Prendre un photo",
+    "PROFIL_CHOOSE_PICTURE":"Choisir un photo"
 }
