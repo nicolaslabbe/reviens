@@ -32,7 +32,9 @@ gulp
 ```
 
 generate font icons from svg
+
 put svg file into src/img/icons/
+
 use a good name for the .svg file (will be used to create css class for the icons)
 ```
 gulp Iconfont
