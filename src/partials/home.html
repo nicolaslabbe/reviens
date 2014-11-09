@@ -1,11 +1,62 @@
 <!-- partials/home.html -->
 <div>
     <ul class="menu">
-        <li class="bg-brand" ui-sref="home"><h1>{{ 'MENU_BRAND' | translate }}</h1></li>
-        <li class="bg-green" ui-sref="profil"><span>{{ 'MENU_PROFIL' | translate }}</span></li>
-        <li class="bg-orange" ui-sref="objects"><span>{{ 'MENU_OBJECTS' | translate }}</span></li>
-        <li class="bg-blue" ui-sref="friends"><span>{{ 'MENU_FRIENDS' | translate }}</span></li>
-        <li class="bg-purple" ui-sref="notifications"><span>{{ 'MENU_NOTIFICATIONS' | translate }}</span></li>
-        <li class="bg-dark-grey" ui-sref="search"><span>{{ 'MENU_SEARCH' | translate }}</span></li>
+        <li class="bg-brand" ui-sref="home">
+            <h1 class="item">
+                <span class="col-xs-12 text-center">
+                    {{ 'MENU_BRAND' | translate }}
+                </span>
+            </h1>
+        </li>
+        <li class="bg-green" ui-sref="profil">
+            <span class="item">
+                <span class="col-xs-3 text-center">
+                    <span class="ico ico-profil"></span>
+                </span>
+                <span class="col-xs-9">
+                    {{ 'MENU_PROFIL' | translate }}
+                </span>
+            </span>
+        </li>
+        <li class="bg-orange" ui-sref="objects">
+            <span class="item">
+                <span class="col-xs-3 text-center">
+                    <span class="ico ico-object"></span>
+                </span>
+                <span class="col-xs-9">
+                    {{ 'MENU_OBJECTS' | translate }}
+                </span>
+            </span>
+        </li>
+        <li class="bg-blue" ui-sref="friends">
+            <span class="item">
+                <span class="col-xs-3 text-center">
+                    <span class="ico ico-friends"></span>
+                </span>
+                <span class="col-xs-9">
+                    {{ 'MENU_FRIENDS' | translate }}
+                </span>
+            </span>
+        </li>
+        <li class="bg-purple" ui-sref="notifications">
+            <span class="item">
+                <span class="col-xs-3 text-center">
+                    <span class="ico ico-speak"></span>
+                </span>
+                <span class="col-xs-9">
+                    {{ 'MENU_NOTIFICATIONS' | translate }}
+                </span>
+            </span>
+        </li>
+        <li class="bg-dark-grey" ui-sref="search">
+            <span class="item">
+                <span class="col-xs-3 text-center">
+                    <span class="ico ico-search"></span>
+                </span>
+                <span class="col-xs-9">
+                    {{ 'MENU_SEARCH' | translate }}
+                </span>
+            </span>
+        </li>
     </ul>
 </div>

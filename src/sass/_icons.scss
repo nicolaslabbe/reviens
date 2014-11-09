@@ -22,20 +22,38 @@
 @function ico-char($filename) {
     $char: "";
 
-    @if $filename == arrow-right {
+    @if $filename == arrow-down {
         $char: "\E001";
     }
-    @if $filename == cross {
+    @if $filename == arrow-right {
         $char: "\E002";
     }
-    @if $filename == home {
+    @if $filename == cross {
         $char: "\E003";
     }
-    @if $filename == location {
+    @if $filename == friends {
         $char: "\E004";
     }
-    @if $filename == profil {
+    @if $filename == home {
         $char: "\E005";
+    }
+    @if $filename == location {
+        $char: "\E006";
+    }
+    @if $filename == object {
+        $char: "\E007";
+    }
+    @if $filename == profil {
+        $char: "\E008";
+    }
+    @if $filename == round-plus {
+        $char: "\E009";
+    }
+    @if $filename == search {
+        $char: "\E00A";
+    }
+    @if $filename == speak {
+        $char: "\E00B";
     }
 
     @return $char;
@@ -48,11 +66,17 @@
     }
 }
 
+.ico-arrow-down {
+    @include ico(arrow-down);
+}
 .ico-arrow-right {
     @include ico(arrow-right);
 }
 .ico-cross {
     @include ico(cross);
+}
+.ico-friends {
+    @include ico(friends);
 }
 .ico-home {
     @include ico(home);
@@ -60,6 +84,18 @@
 .ico-location {
     @include ico(location);
 }
+.ico-object {
+    @include ico(object);
+}
 .ico-profil {
     @include ico(profil);
+}
+.ico-round-plus {
+    @include ico(round-plus);
+}
+.ico-search {
+    @include ico(search);
+}
+.ico-speak {
+    @include ico(speak);
 }

@@ -741,17 +741,17 @@ pre code {
   clear: both;
 }
 
-.row, .list li {
+.row, .menu li, .list li {
   margin-left: -15px;
   margin-right: -15px;
 }
-.row:before, .list li:before, .row:after, .list li:after {
+.row:before, .menu li:before, .list li:before, .row:after, .menu li:after, .list li:after {
   content: " ";
   /* 1 */
   display: table;
   /* 2 */
 }
-.row:after, .list li:after {
+.row:after, .menu li:after, .list li:after {
   clear: both;
 }
 
@@ -4014,7 +4014,7 @@ a.thumbnail.active {
   background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0));
   background-size: 40px 40px;
 }
 
@@ -4030,7 +4030,7 @@ a.thumbnail.active {
   background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0));
 }
 
 .progress-bar-info {
@@ -4040,7 +4040,7 @@ a.thumbnail.active {
   background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0));
 }
 
 .progress-bar-warning {
@@ -4050,7 +4050,7 @@ a.thumbnail.active {
   background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0));
 }
 
 .progress-bar-danger {
@@ -4060,7 +4060,7 @@ a.thumbnail.active {
   background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0));
 }
 
 .media,
@@ -5521,6 +5521,40 @@ td.visible-print {
     display: none !important;
   }
 }
+.fz-xs {
+  font-size: 3.7vw;
+  line-height: 3.7vw;
+}
+
+.fz-sm {
+  font-size: 4.3vw;
+  line-height: 4.3vw;
+}
+
+.fz-md {
+  font-size: 6vw;
+  line-height: 6vw;
+}
+
+.fz-lg, .page .header, .menu .item, .list li .ico {
+  font-size: 9vw;
+  line-height: 9vw;
+}
+
+.fz-xlg, .page .header .ico, .list li .ico.ico-arrow-right {
+  font-size: 12vw;
+  line-height: 12vw;
+}
+
+.fz-xxlg, .menu .item .ico {
+  font-size: 15vw;
+  line-height: 15vw;
+}
+
+.ft-white {
+  color: white;
+}
+
 .ft-brand {
   color: #1fb7c0;
 }
@@ -5550,7 +5584,7 @@ td.visible-print {
   src: url("../fonts/Reviens.eot");
   src: url("../fonts/Reviens.eot?#iefix") format("eot"), url("../fonts/Reviens.woff") format("woff"), url("../fonts/Reviens.ttf") format("truetype"), url("../fonts/Reviens.svg#Reviens") format("svg");
 }
-.ico-arrow-right:before {
+.ico-arrow-down:before, .ico-arrow-right:before, .ico-cross:before, .ico-friends:before, .ico-home:before, .ico-location:before, .ico-object:before, .ico-profil:before, .ico-round-plus:before, .ico-search:before, .ico-speak:before {
   font-family: "Reviens";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -5561,8 +5595,48 @@ td.visible-print {
   text-transform: none;
 }
 
-.ico-arrow-right:before {
+.ico-arrow-down:before {
   content: "\E001";
+}
+
+.ico-arrow-right:before {
+  content: "\E002";
+}
+
+.ico-cross:before {
+  content: "\E003";
+}
+
+.ico-friends:before {
+  content: "\E004";
+}
+
+.ico-home:before {
+  content: "\E005";
+}
+
+.ico-location:before {
+  content: "\E006";
+}
+
+.ico-object:before {
+  content: "\E007";
+}
+
+.ico-profil:before {
+  content: "\E008";
+}
+
+.ico-round-plus:before {
+  content: "\E009";
+}
+
+.ico-search:before {
+  content: "\E00A";
+}
+
+.ico-speak:before {
+  content: "\E00B";
 }
 
 .bg-brand {
@@ -5589,40 +5663,78 @@ td.visible-print {
   background-color: #34495e;
 }
 
-@-webkit-keyframes page_enter {
+@-moz-keyframes page_enter {
   0% {
+    -moz-transform: translate(100%, 0px);
     transform: translate(100%, 0px);
   }
 
   100% {
+    -moz-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+  }
+}
+@-webkit-keyframes page_enter {
+  0% {
+    -webkit-transform: translate(100%, 0px);
+    transform: translate(100%, 0px);
+  }
+
+  100% {
+    -webkit-transform: translate(0px, 0px);
     transform: translate(0px, 0px);
   }
 }
 @keyframes page_enter {
   0% {
+    -moz-transform: translate(100%, 0px);
+    -ms-transform: translate(100%, 0px);
     -webkit-transform: translate(100%, 0px);
+    transform: translate(100%, 0px);
   }
 
   100% {
+    -moz-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
     -webkit-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
   }
 }
-@-webkit-keyframes page_leave {
+@-moz-keyframes page_leave {
   0% {
+    -moz-transform: translate(0px, 0px);
     transform: translate(0px, 0px);
   }
 
   100% {
+    -moz-transform: translate(-100%, 0px);
+    transform: translate(-100%, 0px);
+  }
+}
+@-webkit-keyframes page_leave {
+  0% {
+    -webkit-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+  }
+
+  100% {
+    -webkit-transform: translate(-100%, 0px);
     transform: translate(-100%, 0px);
   }
 }
 @keyframes page_leave {
   0% {
+    -moz-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
     -webkit-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
   }
 
   100% {
+    -moz-transform: translate(-100%, 0px);
+    -ms-transform: translate(-100%, 0px);
     -webkit-transform: translate(-100%, 0px);
+    transform: translate(-100%, 0px);
   }
 }
 .page {
@@ -5636,15 +5748,24 @@ td.visible-print {
   width: 100%;
   height: 65px;
   display: block;
-  padding-left: 70px;
-  font-size: 20px;
   text-transform: uppercase;
   color: white;
   cursor: pointer;
   font-weight: normal;
-  flex: 1;
+  display: -webkit-flex;
   display: flex;
+  -webkit-flex: 1;
+  flex: 1;
+  -webkit-flex-direction: initial;
+  flex-direction: initial;
+  -webkit-align-items: center;
   align-items: center;
+}
+.page .header .ico {
+  width: 70px;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
 }
 .page .header:hover {
   text-decoration: none;
@@ -5669,35 +5790,48 @@ td.visible-print {
 }
 
 .menu {
+  overflow: hidden;
   position: absolute;
   background: black;
   width: 100%;
   height: 100%;
+  display: -webkit-flex;
   display: flex;
+  -webkit-flex: 1;
+  flex: 1;
+  -webkit-flex-direction: column;
   flex-direction: column;
   margin: 0px;
   padding: 0px;
 }
 .menu li {
-  flex: 1;
+  display: -webkit-flex;
   display: flex;
+  -webkit-flex: 1;
+  flex: 1;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
   align-items: center;
+  -webkit-justify-content: center;
   justify-content: center;
 }
-.menu span,
-.menu h1 {
+.menu .item {
   width: 100%;
   display: block;
-  padding-left: 70px;
-  font-size: 30px;
   text-transform: uppercase;
   color: white;
   cursor: pointer;
   font-weight: normal;
+  margin: 0px;
 }
-.menu span:hover,
-.menu h1:hover {
+.menu .item:hover {
   text-decoration: none;
+}
+.menu .item .ico {
+  position: absolute;
+  top: -10px;
+  left: 35px;
 }
 
 .list {
@@ -5709,10 +5843,26 @@ td.visible-print {
 }
 .list li {
   position: relative;
-  font-size: 20px;
   color: #666666;
   clear: both;
-  padding: 10px;
+  padding: 5px 0px;
+  border-bottom: 1px solid #2ecc71;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex: 1;
+  flex: 1;
+  -webkit-flex-direction: initial;
+  flex-direction: initial;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  height: 75px;
+}
+.list li .ico.ico-arrow-right {
+  height: 35px;
+  overflow-y: hidden;
+  display: block;
 }
 .list li div {
   word-wrap: break-word;

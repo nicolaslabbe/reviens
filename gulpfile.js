@@ -64,6 +64,10 @@ gulp.task('Iconfont', function(){
         }))
         .pipe(iconfont({
             fontName: fontName, // required
+            fixedWidth: true,
+            centerHorizontally: true,
+            normalize: true,
+            // descent:
             appendCodepoints: true // recommended option
         }))
         .on('codepoints', function(codepoints, options) {
@@ -85,8 +89,11 @@ gulp.task('concat', function() {
             './' + srcPath + 'bower_components/angular/angular.js',
             './' + srcPath + 'bower_components/angular-animate/angular-animate.min.js',
             './' + srcPath + 'bower_components/angular-translate/angular-translate.min.js',
-            './' + srcPath + 'bower_components/angular-ui-router/release/angular-ui-router.min.js',
-            './' + srcPath + 'js/**/*.js'
+            './' + srcPath + 'bower_components/angular-translate-loader-partial/angular-translate-loader-partial.min.js',
+            './' + srcPath + 'bower_components/angular-ui-router/release/angular-ui-router.min.js',,
+            './' + srcPath + 'js/app.js',
+            './' + srcPath + 'js/reviens.js',
+            './' + srcPath + 'js/modules/*.js'
         ])
         .pipe(concat('all.js'))
         .pipe(gulp.dest('./' + distPath));
@@ -104,6 +111,21 @@ gulp.task('copy', ['clean'], function() {
             srcPath + 'img/**/*.{gif,png,jpg}'
         ])
         .pipe(gulp.dest(distPath + 'img'));
+
+    gulp.src([
+            srcPath + 'fonts/**/*.{eot,svg,ttf,woff}'
+        ])
+        .pipe(gulp.dest(distPath + 'fonts'));
+
+    gulp.src([
+            srcPath + 'partials/**/*.html'
+        ])
+        .pipe(gulp.dest(distPath + 'partials'));
+
+    gulp.src([
+            srcPath + 'translations/**/*.json'
+        ])
+        .pipe(gulp.dest(distPath + 'translations'));
 
     gulp.src([
             srcPath + 'css/**/*.{css,map}'

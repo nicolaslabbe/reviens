@@ -7,11 +7,26 @@
 
     li
         position: relative
-        font-size: $fz-md
         color: $font-grey
         @extend .row
         clear: both
-        padding: 10px
+        padding: 5px 0px
+        border-bottom: 1px solid $green-color
+        +display-flex
+        +flex(1)
+        +flex-direction(initial)
+        +align-items(center)
+        +justify-content(center)
+        height: 75px
+
+        .ico
+            @extend .fz-lg
+
+            &.ico-arrow-right
+                @extend .fz-xlg
+                height: 35px
+                overflow-y: hidden
+                display: block
 
         div
             word-wrap: break-word

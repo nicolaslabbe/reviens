@@ -1,26 +1,14 @@
-@-webkit-keyframes page_enter
+@include keyframes(page_enter)
     0%
-        transform: translate(100%, 0px)
+        @include transform(translate(100%, 0px))
     100%
-        transform: translate(0px, 0px)
+        @include transform(translate(0px, 0px))
 
-@keyframes page_enter
+@include keyframes(page_leave)
     0%
-        -webkit-transform: translate(100%, 0px)
+        @include transform(translate(0px, 0px))
     100%
-        -webkit-transform: translate(0px, 0px)
-
-@-webkit-keyframes page_leave
-    0%
-        transform: translate(0px, 0px)
-    100%
-        transform: translate(-100%, 0px)
-
-@keyframes page_leave
-    0%
-        -webkit-transform: translate(0px, 0px)
-    100%
-        -webkit-transform: translate(-100%, 0px)
+        @include transform(translate(-100%, 0px))
 
 .page
     width: 100%
@@ -33,15 +21,22 @@
         width: 100%
         height: 65px
         display: block
-        padding-left: 70px
-        font-size: $fz-lg
+        @extend .fz-lg
         text-transform: uppercase
         color: $font-light
         cursor: pointer
         font-weight: normal
-        flex: 1
-        display: flex
-        align-items: center
+        +display-flex
+        +flex(1)
+        +flex-direction(initial)
+        +align-items(center)
+
+        .ico
+            width: 70px
+            display: inline-block
+            @extend .fz-xlg
+            vertical-align: top
+            text-align: center
 
         &:hover
             text-decoration: none
@@ -56,10 +51,8 @@
 
 .ng-enter
     &.page
-        -webkit-animation: page_enter 400ms ease-in-out
-        animation: page_enter 400ms ease-in-out
+        @include animation(page_enter 400ms ease-in-out)
 
 .ng-leave
     &.page
-        -webkit-animation: page_leave 400ms ease-in-out
-        animation: page_leave 400ms ease-in-out
+        @include animation(page_leave 400ms ease-in-out)

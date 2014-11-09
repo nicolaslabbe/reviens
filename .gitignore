@@ -5,3 +5,4 @@ plugins
 www
 src/bower_components
 src/fonts
+config/ios
