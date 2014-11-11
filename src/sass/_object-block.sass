@@ -1,0 +1,29 @@
+.object-block
+    border-bottom-width: 1px
+    border-bottom-style: solid
+    @extend .clearfix
+
+    .circle-mask
+        mask: url("../img/icons/circle.svg#logo_mask")
+        -webkit-mask-image: url("../img/icons/circle.svg")
+        width: 100px
+        height: 100px
+        background-size: cover
+        background-position: center center
+        background-repeat: none
+        float: left
+        margin: 10px
+
+    .details
+        @extend .fz-sm
+        margin-top: 20px
+
+        .date
+            margin: 10px 0px
+
+        .title
+            text-transform: uppercase
+            margin: 10px 0px
+
+        .friend
+            margin: 10px 0px

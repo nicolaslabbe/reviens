@@ -4,3 +4,23 @@
     {{ 'HEADER_OBJECTS' | translate }}
     <span class="ico ico-round-plus"></span>
 </div>
+
+<span class="dropdown big-select bg-orange dark" on-toggle="toggled(open)">
+    <a href class="dropdown-toggle">
+    {{ 'OBJECT_CATEGORY' | translate }} : {{selectedOption}}
+    <span class="ico ico-arrow-down"></span>
+    </a>
+    <ul class="dropdown-menu">
+        <li ng-repeat="choice in items">
+            <a href ng-click="setSelectedOption(choice)">{{choice}}</a>
+        </li>
+    </ul>
+</span>
+
+<tabset>
+    <tab class="col-xs-6 bg-orange" heading="{{ 'OBJECT_LEND' | translate }}">
+        <div class="spacer bg-orange"></div>
+        <object-list></object-list>
+    </tab>
+    <tab class="col-xs-6 bg-orange" heading="{{ 'OBJECT_AVAILABLE' | translate }}">available</tab>
+</tabset>

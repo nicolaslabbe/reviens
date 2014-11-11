@@ -1,0 +1,15 @@
+{
+    "OBJECT_TAG_ALL":"All",
+    "TINKER": "Brico/deco",
+    "CD": "CD",
+    "KITCHEN": "Cuisine",
+    "DVD_BLURAY": "DVD/Blu-ray",
+    "IMAGE_SOUNDS": "Image/son",
+    "MUSIC_INSTRUMENT": "Instrument music",
+    "BOOKS": "livres",
+    "CHILDCARE": "Puériculture",
+    "SPORT": "Sport",
+    "VEHICLES": "Véhicules",
+    "CLOTHING": "Vêtements",
+    "OTHERS": "Autres"
+}

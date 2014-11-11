@@ -1,3 +1,6 @@
 {
-    "HEADER_OBJECTS": "Mes objets"
+    "HEADER_OBJECTS": "Mes objets",
+    "OBJECT_CATEGORY": "Catégorie",
+    "OBJECT_LEND": "Pretés",
+    "OBJECT_AVAILABLE": "Disponible"
 }

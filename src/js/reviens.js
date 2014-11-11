@@ -1,9 +1,16 @@
 var reviensApp = angular.module('reviensApp', [
         'ui.router',
+        'ui.bootstrap',
         'ngAnimate',
-        'pascalprecht.translate'
+        'pascalprecht.translate',
+        'tagService'
     ])
     .config(function($stateProvider, $urlRouterProvider, $translateProvider, $translatePartialLoaderProvider) {
+        $translateProvider.useLoader('$translatePartialLoader', {
+            urlTemplate: '/translations/{lang}/{part}.json'
+        });
+        $translateProvider.preferredLanguage('fr-FR');
+
         $stateProvider
             .state('home', {
                 controller: 'HomeController',
@@ -37,10 +44,4 @@ var reviensApp = angular.module('reviensApp', [
             });
 
         $urlRouterProvider.otherwise('/home');
-
-        $translateProvider.useLoader('$translatePartialLoader', {
-            urlTemplate: '/translations/{lang}/{part}.json'
-        });
-
-        $translateProvider.preferredLanguage('fr-FR');
     });

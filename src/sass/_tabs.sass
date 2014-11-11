@@ -1,0 +1,109 @@
+// TABS
+.nav-tabs
+
+    & > li
+        padding: 0px
+        height: 50px
+        display: flex
+        justify-content: center
+        align-content: center
+        flex: 1
+        flex-direction: column
+
+        & > a
+            display: inline-block
+            text-align: center
+            border: 0px
+            @extend .fz-md
+            @extend .ft-white
+            background-color: transparent
+            text-transform: uppercase
+            border: 0px
+
+        .bg-brand
+            color: $white-color
+            background-color: $brand-color
+
+            &.dark
+                background-color: $dark-brand-color
+
+        .bg-green
+            color: $white-color
+            background-color: $green-color
+
+            &.dark
+                background-color: $dark-brand-color
+
+        .bg-orange
+            color: $white-color
+            background-color: $orange-color
+
+            &.dark
+                background-color: $dark-brand-color
+
+        .bg-blue
+            color: $white-color
+            background-color: $blue-color
+
+            &.dark
+                background-color: $dark-brand-color
+
+        .bg-purple
+            color: $white-color
+            background-color: $purple-color
+
+            &.dark
+                background-color: $dark-brand-color
+
+        .bg-dark-grey
+            color: $white-color
+            background-color: $dark-grey-color
+
+            &.dark
+                background-color: $dark-brand-color
+
+        &.active
+
+            > a,
+            > a:hover
+                background-color: transparent
+                border: 0px
+
+            &.bg-brand
+                background-color: $white-color
+
+                a
+                    color: $brand-color
+
+            &.bg-green
+                background-color: $white-color
+
+                a
+                    color: $green-color
+
+            &.bg-orange
+                background-color: $white-color
+
+                a
+                    color: $orange-color
+
+            &.bg-blue
+                background-color: $white-color
+
+                a
+                    color: $blue-color
+
+            &.bg-purple
+                background-color: $white-color
+
+                a
+                    color: $purple-color
+
+            &.bg-dark-grey
+                background-color: $white-color
+
+                a
+                    color: $dark-grey-color
+
+.tab-pane
+    border-top-width: 1px
