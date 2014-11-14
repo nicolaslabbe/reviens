@@ -1,0 +1,30 @@
+
+// Modal background
+.modal-backdrop
+    background-color: transparent
+
+    &.fade
+        +opacity(1)
+    &.in
+        +opacity(1)
+
+.modal
+    &.fade
+        +opacity(1)
+
+        .modal-dialog
+            +translate(0, 100%)
+
+    &.in
+        +opacity(1)
+
+        .modal-dialog
+            +translate(0, 0)
+
+    .modal-dialog
+        +transition-transform(400ms ease-out)
+        padding: 0px
+        height: 100%
+
+        .modal-content
+            height: 100%

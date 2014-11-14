@@ -2,5 +2,8 @@
     "HEADER_OBJECTS": "Mes objets",
     "OBJECT_CATEGORY": "Catégorie",
     "OBJECT_LEND": "Pretés",
-    "OBJECT_AVAILABLE": "Disponible"
+    "OBJECT_AVAILABLE": "Disponible",
+    "OBJECTS_NEW": "Nouveau",
+    "OBJECTS_NAME": "Nom de l'objet *",
+    "OBJECT_TO_FRIENDS": "Disponible pour mes amis"
 }

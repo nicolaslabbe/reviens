@@ -1,6 +1,13 @@
-reviensApp.controller('HomeController', function($scope, $translate, $translatePartialLoader) {
-    $scope.pageClass = 'page-home';
+(function() {
+    "use strict";
 
-    $translatePartialLoader.addPart('home');
-    $translate.refresh();
-});
+    var reviensApp = reviensApp || {};
+
+    reviensApp
+        .controller('HomeController', function($scope, $translate, $translatePartialLoader) {
+            $scope.pageClass = 'page-home';
+
+            $translatePartialLoader.addPart('home');
+            $translate.refresh();
+        });
+})();

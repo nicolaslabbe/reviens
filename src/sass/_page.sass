@@ -16,31 +16,6 @@
     display: block
     position: absolute
 
-    .header
-        position: relative
-        width: 100%
-        height: 65px
-        display: block
-        @extend .fz-lg
-        text-transform: uppercase
-        color: $font-light
-        cursor: pointer
-        font-weight: normal
-        +display-flex
-        +flex(1)
-        +flex-direction(initial)
-        +align-items(center)
-
-        .ico
-            width: 70px
-            display: inline-block
-            @extend .fz-xlg
-            vertical-align: top
-            text-align: center
-
-        &:hover
-            text-decoration: none
-
     .back
         position: absolute
         top: 0px
@@ -56,3 +31,33 @@
 .ng-leave
     &.page
         @include animation(page_leave 400ms ease-in-out)
+
+.header
+    position: relative
+    width: 100%
+    height: 65px
+    display: block
+    @extend .fz-lg
+    text-transform: uppercase
+    color: $font-light
+    cursor: pointer
+    font-weight: normal
+    +display-flex
+    +flex(1)
+    +flex-direction(initial)
+    +align-items(center)
+
+    .title
+        display: inline-block
+        width: 100%
+        text-align: center
+
+    .ico
+        width: 80px
+        display: inline-block
+        @extend .fz-xlg
+        vertical-align: top
+        text-align: center
+
+    &:hover
+        text-decoration: none

@@ -1,8 +1,8 @@
 <!-- partials/objects.html -->
 <div class="header bg-orange">
-    <div ng-include="'partials/block-back.html'"></div>
-    {{ 'HEADER_OBJECTS' | translate }}
-    <span class="ico ico-round-plus"></span>
+    <span class="display-inherit" ng-include="'partials/block-back.html'"></span>
+    <span class="title">{{ 'HEADER_OBJECTS' | translate }}</span>
+    <span class="ico ico-round-plus" ng-click="openModal()"></span>
 </div>
 
 <span class="dropdown big-select bg-orange dark" on-toggle="toggled(open)">
@@ -24,3 +24,7 @@
     </tab>
     <tab class="col-xs-6 bg-orange" heading="{{ 'OBJECT_AVAILABLE' | translate }}">available</tab>
 </tabset>
+
+<div ng-controller="addObjectController">
+    <span ng-include="'partials/modal.html'"></span>
+</div>

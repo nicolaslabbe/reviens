@@ -8,7 +8,9 @@ var gulp = require('gulp'),
     clean = require('gulp-clean'),
     rename = require('gulp-rename'),
     iconfont = require('gulp-iconfont'),
-    iconfontCss = require('gulp-iconfont-css');
+    iconfontCss = require('gulp-iconfont-css'),
+    jshint = require('gulp-jshint'),
+    stylish = require('jshint-stylish');
 
 var notifyInfo = {
     title: 'Gulp'
@@ -47,10 +49,17 @@ gulp.task('compass', function() {
     .pipe(livereload());
 });
 
+gulp.task('lint', function() {
+    // return gulp.src(srcPath + '/js/**/*.js')
+    return gulp.src(srcPath + '/js/**/*.js')
+        .pipe(jshint())
+        .pipe(jshint.reporter('jshint-stylish'));
+});
+
 gulp.task('watch', function() {
     livereload.listen();
     gulp.watch(path.src.sass + '*.sass', ['compass']);
-    gulp.watch(srcPath + '/js/**/*.js').on('change', livereload.changed);
+    gulp.watch(srcPath + '/js/**/*.js', ['lint']).on('change', livereload.changed);
     gulp.watch(srcPath + '/partials/*.html').on('change', livereload.changed);
 });
 

@@ -1,6 +1,13 @@
-reviensApp.controller('friendsController', function($scope, $translate, $translatePartialLoader) {
-    $scope.pageClass = 'page-friends';
+(function() {
+    "use strict";
 
-    $translatePartialLoader.addPart('friends');
-    $translate.refresh();
-});
+    var reviensApp = reviensApp || {};
+
+    reviensApp
+        .controller('friendsController', function($scope, $translate, $translatePartialLoader) {
+            $scope.pageClass = 'page-friends';
+
+            $translatePartialLoader.addPart('friends');
+            $translate.refresh();
+        });
+})();

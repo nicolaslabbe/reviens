@@ -28,32 +28,44 @@
     @if $filename == arrow-right {
         $char: "\E002";
     }
-    @if $filename == cross {
+    @if $filename == camera {
         $char: "\E003";
     }
-    @if $filename == friends {
+    @if $filename == circle {
         $char: "\E004";
     }
-    @if $filename == home {
+    @if $filename == close {
         $char: "\E005";
     }
-    @if $filename == location {
+    @if $filename == cross {
         $char: "\E006";
     }
-    @if $filename == object {
+    @if $filename == friends {
         $char: "\E007";
     }
-    @if $filename == profil {
+    @if $filename == home {
         $char: "\E008";
     }
-    @if $filename == round-plus {
+    @if $filename == location {
         $char: "\E009";
     }
-    @if $filename == search {
+    @if $filename == object {
         $char: "\E00A";
     }
-    @if $filename == speak {
+    @if $filename == profil {
         $char: "\E00B";
+    }
+    @if $filename == round-plus {
+        $char: "\E00C";
+    }
+    @if $filename == search {
+        $char: "\E00D";
+    }
+    @if $filename == speak {
+        $char: "\E00E";
+    }
+    @if $filename == valid {
+        $char: "\E00F";
     }
 
     @return $char;
@@ -71,6 +83,15 @@
 }
 .ico-arrow-right {
     @include ico(arrow-right);
+}
+.ico-camera {
+    @include ico(camera);
+}
+.ico-circle {
+    @include ico(circle);
+}
+.ico-close {
+    @include ico(close);
 }
 .ico-cross {
     @include ico(cross);
@@ -98,4 +119,7 @@
 }
 .ico-speak {
     @include ico(speak);
+}
+.ico-valid {
+    @include ico(valid);
 }

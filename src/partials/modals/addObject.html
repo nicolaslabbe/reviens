@@ -1,0 +1,15 @@
+<!-- partials/objects.html -->
+<div class="header bg-orange">
+    <span class="ico ico-close" ng-click="ok()"></span>
+    <span class="title">{{ 'OBJECTS_NEW' | translate }}</span>
+    <span class="ico ico-valid" ng-click="cancel()"></span>
+</div>
+
+<picture></picture>
+
+<input type="text" placeholder="{{ 'OBJECTS_NAME' | translate }}" class="bd-orange">
+
+<div class="col-xs-12 switch-container">
+    <switch class="pull-right" change-action="doIt()"></switch>
+    <span class="fz-md">{{ 'OBJECT_TO_FRIENDS' | translate }}</span>
+</div>
