@@ -1,7 +1,7 @@
 (function() {
     "use strict";
 
-    var reviensApp = reviensApp || {};
+    var reviensApp = window.reviensApp || {};
 
     reviensApp
         .controller('addObjectController', function($scope, $modal) {
@@ -22,7 +22,8 @@
 
     reviensApp
         .controller('modalAddObjectController', function ($scope, $modalInstance) {
-            this.checked = false;
+            $scope.checked = false;
+
             $scope.ok = function () {
                 $modalInstance.close();
             };
@@ -31,8 +32,8 @@
                 $modalInstance.dismiss('cancel');
             };
 
-            $scope.doIt = function() {
-                //this.checked =
+            $scope.forFriends = function(checked) {
+                this.checked = checked;
             };
         });
 })();

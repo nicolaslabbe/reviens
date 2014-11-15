@@ -1,7 +1,7 @@
 (function() {
     "use strict";
 
-    var reviensApp = reviensApp || {};
+    var reviensApp = window.reviensApp || {};
 
     reviensApp
         .controller('profilController', function($scope, $translate, $translatePartialLoader) {

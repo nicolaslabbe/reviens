@@ -1,7 +1,7 @@
 (function() {
     "use strict";
 
-    var reviensApp = reviensApp || {};
+    var reviensApp = window.reviensApp || {};
 
     reviensApp
         .controller('objectsController', function($scope, $translate, $translatePartialLoader, TagService) {
@@ -9,7 +9,6 @@
 
             $translatePartialLoader.addPart('objects');
             $translatePartialLoader.addPart('tags');
-            $translate.use('fr-FR');
             $translate.refresh();
 
             TagService.getData()

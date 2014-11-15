@@ -1,4 +1,5 @@
-/*exported reviensApp*/var reviensApp = (function(){
+/*exported reviensApp*/
+var reviensApp = (function(){
     "use strict";
 
     var app = angular.module('reviensApp', [
